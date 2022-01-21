@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PERS_LIST">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ZGLV">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VERSION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="5" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date">
+                    <xs:minInclusive value="1900-01-01" />
+                    <xs:maxInclusive value="2030-12-31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FILENAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="26" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FILENAME1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="26" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" name="PERS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_PAC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="36" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FAM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="40" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="40" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="40" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="W">
+                <xs:simpleType>
+                  <xs:restriction base="xs:long">
+                    <xs:minInclusive value="0" />
+                    <xs:maxExclusive value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date">
+                    <xs:minInclusive value="1900-01-01" />
+                    <xs:maxInclusive value="2030-12-31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="DOST">
+                <xs:simpleType>
+                  <xs:restriction base="xs:long">
+                    <xs:minInclusive value="0" />
+                    <xs:maxExclusive value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TEL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="100" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FAM_P">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="40" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IM_P">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="40" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OT_P">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="40" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="W_P">
+                <xs:simpleType>
+                  <xs:restriction base="xs:long">
+                    <xs:minInclusive value="0" />
+                    <xs:maxExclusive value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DR_P">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date">
+                    <xs:minInclusive value="1900-01-01" />
+                    <xs:maxInclusive value="2030-12-31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="DOST_P">
+                <xs:simpleType>
+                  <xs:restriction base="xs:long">
+                    <xs:minInclusive value="0" />
+                    <xs:maxExclusive value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="100" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DOCTYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="2" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DOCSER">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="10" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DOCNUM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="20" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DOCDATE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date">
+                    <xs:minInclusive value="1900-01-01" />
+                    <xs:maxInclusive value="2030-12-31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DOCORG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="1000" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SNILS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="14" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OKATOG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="11" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OKATOP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="11" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="COMENTP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:maxLength value="250" />
+                    <xs:minLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

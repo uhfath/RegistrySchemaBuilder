@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="packet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="zglv">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="type">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:token">
+                                        <xs:enumeration value="DESCR_R" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="version">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:token">
+                                        <xs:enumeration value="1.6" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="date">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+                                        <xs:pattern value="\d{2}.\d{2}.\d{4}" />
+                                        <xs:enumeration value="19.02.2020" />
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="zap" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="IDZAP">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:maxLength value="100"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ID_EL">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:maxLength value="100"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="TYPE_D">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:maxLength value="2"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="TYPE_E">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:maxLength value="2"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="FORM_E">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:maxLength value="1"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="MXLEN_E" minOccurs="0">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:maxLength value="4"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="NAME_E">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:maxLength value="150"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="DESC_E" minOccurs="0">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:maxLength value="1500"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="DATEBEG">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+                                        <xs:pattern value="\d{2}.\d{2}.\d{4}" />
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="DATEEND" minOccurs="0">
+                                <xs:simpleType>
+									<xs:restriction base="xs:token">
+                                        <xs:pattern value="(\d{2}.\d{2}.\d{4})?" />
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
