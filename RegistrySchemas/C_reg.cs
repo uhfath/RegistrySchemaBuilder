@@ -11,7 +11,7 @@
 // 
 // Этот исходный код был создан с помощью xsd, версия=4.8.3928.0.
 // 
-namespace RegistrySchemas.DTO.H_reg {
+namespace RegistrySchemas.C_reg {
     using System.Xml.Serialization;
     
     
@@ -1121,6 +1121,8 @@ namespace RegistrySchemas.DTO.H_reg {
         
         private bool c_ZABFieldSpecified;
         
+        private long dS_ONKField;
+        
         private long dnField;
         
         private bool dnFieldSpecified;
@@ -1128,6 +1130,12 @@ namespace RegistrySchemas.DTO.H_reg {
         private string[] cODE_MES1Field;
         
         private string cODE_MES2Field;
+        
+        private ZL_LISTZAPZ_SLSLNAPR[] nAPRField;
+        
+        private ZL_LISTZAPZ_SLSLCONS[] cONSField;
+        
+        private ZL_LISTZAPZ_SLSLONK_SL oNK_SLField;
         
         private ZL_LISTZAPZ_SLSLKSG_KPG kSG_KPGField;
         
@@ -1388,6 +1396,17 @@ namespace RegistrySchemas.DTO.H_reg {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long DS_ONK {
+            get {
+                return this.dS_ONKField;
+            }
+            set {
+                this.dS_ONKField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long DN {
             get {
                 return this.dnField;
@@ -1427,6 +1446,39 @@ namespace RegistrySchemas.DTO.H_reg {
             }
             set {
                 this.cODE_MES2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("NAPR", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ZL_LISTZAPZ_SLSLNAPR[] NAPR {
+            get {
+                return this.nAPRField;
+            }
+            set {
+                this.nAPRField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CONS", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ZL_LISTZAPZ_SLSLCONS[] CONS {
+            get {
+                return this.cONSField;
+            }
+            set {
+                this.cONSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ZL_LISTZAPZ_SLSLONK_SL ONK_SL {
+            get {
+                return this.oNK_SLField;
+            }
+            set {
+                this.oNK_SLField = value;
             }
         }
         
@@ -1570,6 +1622,810 @@ namespace RegistrySchemas.DTO.H_reg {
             }
             set {
                 this.cOMENTSLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
+    public partial class ZL_LISTZAPZ_SLSLNAPR {
+        
+        private System.DateTime nAPR_DATEField;
+        
+        private string nAPR_MOField;
+        
+        private long nAPR_VField;
+        
+        private long mET_ISSLField;
+        
+        private bool mET_ISSLFieldSpecified;
+        
+        private string nAPR_USLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date")]
+        public System.DateTime NAPR_DATE {
+            get {
+                return this.nAPR_DATEField;
+            }
+            set {
+                this.nAPR_DATEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+        public string NAPR_MO {
+            get {
+                return this.nAPR_MOField;
+            }
+            set {
+                this.nAPR_MOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long NAPR_V {
+            get {
+                return this.nAPR_VField;
+            }
+            set {
+                this.nAPR_VField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long MET_ISSL {
+            get {
+                return this.mET_ISSLField;
+            }
+            set {
+                this.mET_ISSLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MET_ISSLSpecified {
+            get {
+                return this.mET_ISSLFieldSpecified;
+            }
+            set {
+                this.mET_ISSLFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+        public string NAPR_USL {
+            get {
+                return this.nAPR_USLField;
+            }
+            set {
+                this.nAPR_USLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
+    public partial class ZL_LISTZAPZ_SLSLCONS {
+        
+        private long pR_CONSField;
+        
+        private System.DateTime dT_CONSField;
+        
+        private bool dT_CONSFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long PR_CONS {
+            get {
+                return this.pR_CONSField;
+            }
+            set {
+                this.pR_CONSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date")]
+        public System.DateTime DT_CONS {
+            get {
+                return this.dT_CONSField;
+            }
+            set {
+                this.dT_CONSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DT_CONSSpecified {
+            get {
+                return this.dT_CONSFieldSpecified;
+            }
+            set {
+                this.dT_CONSFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
+    public partial class ZL_LISTZAPZ_SLSLONK_SL {
+        
+        private long dS1_TField;
+        
+        private long sTADField;
+        
+        private bool sTADFieldSpecified;
+        
+        private long oNK_TField;
+        
+        private bool oNK_TFieldSpecified;
+        
+        private long oNK_NField;
+        
+        private bool oNK_NFieldSpecified;
+        
+        private long oNK_MField;
+        
+        private bool oNK_MFieldSpecified;
+        
+        private long mTSTZField;
+        
+        private bool mTSTZFieldSpecified;
+        
+        private decimal sODField;
+        
+        private bool sODFieldSpecified;
+        
+        private long k_FRField;
+        
+        private bool k_FRFieldSpecified;
+        
+        private decimal wEIField;
+        
+        private bool wEIFieldSpecified;
+        
+        private long hEIField;
+        
+        private bool hEIFieldSpecified;
+        
+        private decimal bSAField;
+        
+        private bool bSAFieldSpecified;
+        
+        private ZL_LISTZAPZ_SLSLONK_SLB_DIAG[] b_DIAGField;
+        
+        private ZL_LISTZAPZ_SLSLONK_SLB_PROT[] b_PROTField;
+        
+        private ZL_LISTZAPZ_SLSLONK_SLONK_USL[] oNK_USLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long DS1_T {
+            get {
+                return this.dS1_TField;
+            }
+            set {
+                this.dS1_TField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long STAD {
+            get {
+                return this.sTADField;
+            }
+            set {
+                this.sTADField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool STADSpecified {
+            get {
+                return this.sTADFieldSpecified;
+            }
+            set {
+                this.sTADFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long ONK_T {
+            get {
+                return this.oNK_TField;
+            }
+            set {
+                this.oNK_TField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ONK_TSpecified {
+            get {
+                return this.oNK_TFieldSpecified;
+            }
+            set {
+                this.oNK_TFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long ONK_N {
+            get {
+                return this.oNK_NField;
+            }
+            set {
+                this.oNK_NField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ONK_NSpecified {
+            get {
+                return this.oNK_NFieldSpecified;
+            }
+            set {
+                this.oNK_NFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long ONK_M {
+            get {
+                return this.oNK_MField;
+            }
+            set {
+                this.oNK_MField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ONK_MSpecified {
+            get {
+                return this.oNK_MFieldSpecified;
+            }
+            set {
+                this.oNK_MFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long MTSTZ {
+            get {
+                return this.mTSTZField;
+            }
+            set {
+                this.mTSTZField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MTSTZSpecified {
+            get {
+                return this.mTSTZFieldSpecified;
+            }
+            set {
+                this.mTSTZFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public decimal SOD {
+            get {
+                return this.sODField;
+            }
+            set {
+                this.sODField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SODSpecified {
+            get {
+                return this.sODFieldSpecified;
+            }
+            set {
+                this.sODFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long K_FR {
+            get {
+                return this.k_FRField;
+            }
+            set {
+                this.k_FRField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool K_FRSpecified {
+            get {
+                return this.k_FRFieldSpecified;
+            }
+            set {
+                this.k_FRFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public decimal WEI {
+            get {
+                return this.wEIField;
+            }
+            set {
+                this.wEIField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool WEISpecified {
+            get {
+                return this.wEIFieldSpecified;
+            }
+            set {
+                this.wEIFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long HEI {
+            get {
+                return this.hEIField;
+            }
+            set {
+                this.hEIField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool HEISpecified {
+            get {
+                return this.hEIFieldSpecified;
+            }
+            set {
+                this.hEIFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public decimal BSA {
+            get {
+                return this.bSAField;
+            }
+            set {
+                this.bSAField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool BSASpecified {
+            get {
+                return this.bSAFieldSpecified;
+            }
+            set {
+                this.bSAFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("B_DIAG", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ZL_LISTZAPZ_SLSLONK_SLB_DIAG[] B_DIAG {
+            get {
+                return this.b_DIAGField;
+            }
+            set {
+                this.b_DIAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("B_PROT", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ZL_LISTZAPZ_SLSLONK_SLB_PROT[] B_PROT {
+            get {
+                return this.b_PROTField;
+            }
+            set {
+                this.b_PROTField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ONK_USL", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ZL_LISTZAPZ_SLSLONK_SLONK_USL[] ONK_USL {
+            get {
+                return this.oNK_USLField;
+            }
+            set {
+                this.oNK_USLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
+    public partial class ZL_LISTZAPZ_SLSLONK_SLB_DIAG {
+        
+        private System.DateTime dIAG_DATEField;
+        
+        private long dIAG_TIPField;
+        
+        private long dIAG_CODEField;
+        
+        private long dIAG_RSLTField;
+        
+        private bool dIAG_RSLTFieldSpecified;
+        
+        private long rEC_RSLTField;
+        
+        private bool rEC_RSLTFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date")]
+        public System.DateTime DIAG_DATE {
+            get {
+                return this.dIAG_DATEField;
+            }
+            set {
+                this.dIAG_DATEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long DIAG_TIP {
+            get {
+                return this.dIAG_TIPField;
+            }
+            set {
+                this.dIAG_TIPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long DIAG_CODE {
+            get {
+                return this.dIAG_CODEField;
+            }
+            set {
+                this.dIAG_CODEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long DIAG_RSLT {
+            get {
+                return this.dIAG_RSLTField;
+            }
+            set {
+                this.dIAG_RSLTField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DIAG_RSLTSpecified {
+            get {
+                return this.dIAG_RSLTFieldSpecified;
+            }
+            set {
+                this.dIAG_RSLTFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long REC_RSLT {
+            get {
+                return this.rEC_RSLTField;
+            }
+            set {
+                this.rEC_RSLTField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool REC_RSLTSpecified {
+            get {
+                return this.rEC_RSLTFieldSpecified;
+            }
+            set {
+                this.rEC_RSLTFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
+    public partial class ZL_LISTZAPZ_SLSLONK_SLB_PROT {
+        
+        private long pROTField;
+        
+        private System.DateTime d_PROTField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long PROT {
+            get {
+                return this.pROTField;
+            }
+            set {
+                this.pROTField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date")]
+        public System.DateTime D_PROT {
+            get {
+                return this.d_PROTField;
+            }
+            set {
+                this.d_PROTField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
+    public partial class ZL_LISTZAPZ_SLSLONK_SLONK_USL {
+        
+        private long uSL_TIPField;
+        
+        private long hIR_TIPField;
+        
+        private bool hIR_TIPFieldSpecified;
+        
+        private long lEK_TIP_LField;
+        
+        private bool lEK_TIP_LFieldSpecified;
+        
+        private long lEK_TIP_VField;
+        
+        private bool lEK_TIP_VFieldSpecified;
+        
+        private ZL_LISTZAPZ_SLSLONK_SLONK_USLLEK_PR[] lEK_PRField;
+        
+        private long pPTRField;
+        
+        private bool pPTRFieldSpecified;
+        
+        private long lUCH_TIPField;
+        
+        private bool lUCH_TIPFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long USL_TIP {
+            get {
+                return this.uSL_TIPField;
+            }
+            set {
+                this.uSL_TIPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long HIR_TIP {
+            get {
+                return this.hIR_TIPField;
+            }
+            set {
+                this.hIR_TIPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool HIR_TIPSpecified {
+            get {
+                return this.hIR_TIPFieldSpecified;
+            }
+            set {
+                this.hIR_TIPFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long LEK_TIP_L {
+            get {
+                return this.lEK_TIP_LField;
+            }
+            set {
+                this.lEK_TIP_LField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LEK_TIP_LSpecified {
+            get {
+                return this.lEK_TIP_LFieldSpecified;
+            }
+            set {
+                this.lEK_TIP_LFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long LEK_TIP_V {
+            get {
+                return this.lEK_TIP_VField;
+            }
+            set {
+                this.lEK_TIP_VField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LEK_TIP_VSpecified {
+            get {
+                return this.lEK_TIP_VFieldSpecified;
+            }
+            set {
+                this.lEK_TIP_VFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("LEK_PR", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ZL_LISTZAPZ_SLSLONK_SLONK_USLLEK_PR[] LEK_PR {
+            get {
+                return this.lEK_PRField;
+            }
+            set {
+                this.lEK_PRField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long PPTR {
+            get {
+                return this.pPTRField;
+            }
+            set {
+                this.pPTRField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PPTRSpecified {
+            get {
+                return this.pPTRFieldSpecified;
+            }
+            set {
+                this.pPTRFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public long LUCH_TIP {
+            get {
+                return this.lUCH_TIPField;
+            }
+            set {
+                this.lUCH_TIPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LUCH_TIPSpecified {
+            get {
+                return this.lUCH_TIPFieldSpecified;
+            }
+            set {
+                this.lUCH_TIPFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
+    public partial class ZL_LISTZAPZ_SLSLONK_SLONK_USLLEK_PR {
+        
+        private string rEGNUMField;
+        
+        private string cODE_SHField;
+        
+        private System.DateTime[] dATE_INJField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+        public string REGNUM {
+            get {
+                return this.rEGNUMField;
+            }
+            set {
+                this.rEGNUMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token")]
+        public string CODE_SH {
+            get {
+                return this.cODE_SHField;
+            }
+            set {
+                this.cODE_SHField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("DATE_INJ", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date")]
+        public System.DateTime[] DATE_INJ {
+            get {
+                return this.dATE_INJField;
+            }
+            set {
+                this.dATE_INJField = value;
             }
         }
     }

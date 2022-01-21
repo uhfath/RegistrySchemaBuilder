@@ -11,7 +11,7 @@
 // 
 // Этот исходный код был создан с помощью xsd, версия=4.8.3928.0.
 // 
-namespace RegistrySchemas.DTO.V_reg {
+namespace RegistrySchemas.V_reg {
     using System.Xml.Serialization;
     
     
